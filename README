@@ -1,0 +1,12 @@
+##This is the EchoAir 512, a (regional) airliner by D-ECHO, based on the b1900d by Syd Adams and using the lights from the CRJ700 by Ryan Miller##
+##licensed under GPL##
+Boarding music: “Time Is Picking Away” by Jeremy Wray (jelsonic.com) under CC BY 4.0 			A big thanks to him!
+
+
+The EchoAir 512 is one of the first 114-seating aircraft that is completely electric-powered, using hydrogen fuel cells and 8 combined propellers.
+V1:~100kts
+Vr:130kts
+V2: 140-150kts
+Vcruise: 300-400kts
+Vapp:140kts
+Vstall:~125kts

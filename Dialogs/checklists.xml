@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+<name>Checklists</name>
+ <checklist>  
+    <title>Direct wheel thruster</title>
+<page>
+    <item>
+      <name>Battery Switch</name>
+      <value>On</value>
+    </item>
+    <item>
+      <name>Wheel Thruster Master Switch</name>
+      <value>On</value>
+      <marker>
+      <x-m>0.05</x-m>
+      <y-m>-0.025</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+        <scale>1.7500</scale>
+      </marker>
+      <condition>
+        <equals>
+          <property>/controls/gear/wheel-thruster</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/gear/wheel-thruster</property>
+        <value>1</value>
+      </binding>
+    </item>
+    <item>
+      <name>Use Throttle to control speed</name>
+    </item>
+    <item>
+      <name>Reverse Force</name>
+      <value>Delete key</value>
+    </item>
+</page>
+  </checklist>
+  
+  
+  <checklist>
+    <title>More checklists</title>
+      <item>
+        <name>Soon to come</name>
+      </item>
+  </checklist>
+</PropertyList>

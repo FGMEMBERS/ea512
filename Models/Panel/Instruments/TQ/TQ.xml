@@ -1,0 +1,324 @@
+<PropertyList>
+<path>TQ.ac</path>
+<!--<animation>
+  <type>material</type>
+  <object-name>gearFind</object-name>
+  <object-name>gearLind</object-name>
+  <object-name>gearRind</object-name>
+  <object-name>gearF.001</object-name>
+  <object-name>gearL.001</object-name>
+  <object-name>gearR.001</object-name>
+  <ambient>
+   <red>0.5</red>
+   <green>0.5</green>
+   <blue>0.5</blue>
+  </ambient>
+ </animation>-->
+<!--Light reverser lights when thrust reverse is active-->
+<animation>
+  <type>material</type>
+  <object-name>reverserL</object-name>
+<condition>
+        <property>/controls/engines/engine[0]/reverser</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>reverserL</object-name>
+<condition><not>
+        <property>/controls/engines/engine[0]/reverser</property></not>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>reverserR</object-name>
+<condition>
+        <property>/controls/engines/engine[1]/reverser</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>reverserR</object-name>
+<condition><not>
+        <property>/controls/engines/engine[1]/reverser</property></not>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--Direct wheel thruster--><!--
+<animation>
+  <type>rotate</type>
+  <object-name>throttleL</object-name>
+  <object-name>throttleR</object-name>
+        <property>/sim/model/pushback/force</property>
+<factor>-90</factor>
+<center>
+<x-m>0.0</x-m>
+<z-m>0.0</z-m>
+</center>
+<axis><y>1</y></axis>
+  </animation>-->
+<!--Throttle forward motion-->
+<animation>
+  <type>rotate</type>
+  <object-name>throttleL</object-name>
+        <property>controls/engines/engine[0]/throttle-fwd</property>
+<factor>-90</factor>
+<center>
+<x-m>0.0</x-m>
+<z-m>0.0</z-m>
+</center>
+<axis><y>1</y></axis>
+  </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>throttleR</object-name>
+        <property>controls/engines/engine[1]/throttle-fwd</property>
+<factor>-90</factor>
+<center>
+<x-m>0.0</x-m>
+<z-m>0.0</z-m>
+</center>
+<axis><y>1</y></axis>
+  </animation>
+<!--Throttle has to be pulled up a little for thrust reverse-->
+<animation>
+  <type>translate</type>
+  <object-name>throttleL</object-name>
+        <property>controls/engines/engine[0]/reverser</property>
+<factor>0.01</factor>
+<axis><x>1</x><z>1</z></axis>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>throttleR</object-name>
+        <property>controls/engines/engine[1]/reverser</property>
+<factor>0.01</factor>
+<axis><x>1</x><z>1</z></axis>
+  </animation>
+<!--Throttle backwards motion-->
+<animation>
+  <type>translate</type>
+  <object-name>throttleL</object-name>
+<condition>
+        <property>controls/engines/engine[0]/reverser</property>
+</condition>
+        <property>controls/engines/engine[0]/throttle</property>
+<factor>0.03</factor>
+<axis><x>1</x></axis>
+  </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>throttleL</object-name>
+<condition>
+        <property>controls/engines/engine[0]/reverser</property>
+</condition>
+        <property>controls/engines/engine[0]/throttle</property>
+<factor>20</factor>
+<center>
+<x-m>0.0</x-m>
+<z-m>0.0</z-m>
+</center>
+<axis><y>1</y></axis>
+  </animation>
+<animation>
+  <type>translate</type>
+  <object-name>throttleR</object-name>
+<condition>
+        <property>controls/engines/engine[1]/reverser</property>
+</condition>
+        <property>controls/engines/engine[1]/throttle</property>
+<factor>0.03</factor>
+<axis><x>1</x></axis>
+  </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>throttleR</object-name>
+<condition>
+        <property>controls/engines/engine[1]/reverser</property>
+</condition>
+        <property>controls/engines/engine[1]/throttle</property>
+<factor>20</factor>
+<center>
+<x-m>0.0</x-m>
+<z-m>0.0</z-m>
+</center>
+<axis><y>1</y></axis>
+  </animation>
+  <!--Flaps lever-->
+<animation>
+<type>rotate</type>
+<object-name>flapslever</object-name>
+<property>/controls/flight/flaps</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind><dep>60</dep>
+            </entry>
+            <entry>
+                <ind>0.5</ind><dep>110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind><dep>130</dep>
+            </entry>
+        </interpolation>
+<axis><y>1</y></axis>
+<center>
+<x-m>-0.0</x-m>
+<z-m>0.0</z-m>
+</center>
+</animation>
+<!--Light flap lights-->
+<!--UP-->
+<animation>
+  <type>material</type>
+  <object-name>flapsUP</object-name>
+<condition><less-than>
+        <property>/surface-positions/flap-pos-norm</property><value>0.05</value></less-than>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--1-->
+<animation>
+  <type>material</type>
+  <object-name>flaps1</object-name>
+<condition><greater-than>
+        <property>/surface-positions/flap-pos-norm</property><value>0.19</value></greater-than>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--2-->
+<animation>
+  <type>material</type>
+  <object-name>flaps2</object-name>
+<condition><greater-than>
+        <property>/surface-positions/flap-pos-norm</property><value>0.49</value></greater-than>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--3-->
+<animation>
+  <type>material</type>
+  <object-name>flaps3</object-name>
+<condition><greater-than>
+        <property>/surface-positions/flap-pos-norm</property><value>0.9</value></greater-than>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+</PropertyList>

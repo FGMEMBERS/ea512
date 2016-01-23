@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+<!--Uncatagorized-->
+    <model>
+    <path>Instruments/comp/comp.xml</path>
+    <offsets>
+      <y-m>0.0</y-m>
+      <x-m>0.2</x-m>
+      <z-m>0.75</z-m>
+<pitch-deg>20</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Instruments/fuel/fuel1.xml</path>
+    <offsets>
+      <x-m>0.17</x-m>
+      <y-m>-0.025</y-m>
+      <z-m>-0.355</z-m>
+<pitch-deg>-66</pitch-deg>
+    </offsets>
+  </model>
+   <model>
+    <path>Instruments/fuel/fuel2.xml</path>
+    <offsets>
+      <x-m>0.17</x-m>
+      <y-m>0.025</y-m>
+      <z-m>-0.355</z-m>
+<pitch-deg>-66</pitch-deg>
+    </offsets>
+  </model>
+     <model>
+    <path>Instruments/tach/tach2.xml</path>
+    <offsets>
+      <x-m>0.075</x-m>
+      <y-m>0.15</y-m>
+      <z-m>-0.29</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+
+     <model>
+    <path>Instruments/tach/tach1.xml</path>
+    <offsets>
+      <x-m>0.075</x-m>
+      <y-m>-0.15</y-m>
+      <z-m>-0.29</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+<!--Communication/Navigation -->
+      <model>
+    <path>Aircraft/Instruments-3d/kt76a/kt76a.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.00</y-m>
+      <z-m>-0.405</z-m>
+<pitch-deg>-66</pitch-deg>
+    </offsets>
+  </model>
+      <model>
+    <path>Instruments/kx165/kx165-1.xml</path>
+    <offsets>
+      <x-m>0.285</x-m>
+      <y-m>-0.00</y-m>
+      <z-m>-0.43</z-m>
+<pitch-deg>-66</pitch-deg>
+    </offsets>
+  </model>
+<!--Board Communication-->
+<model>
+    <path>Instruments/boardcomm/boardcomm.xml</path>
+    <offsets>
+      <x-m>0.375</x-m>
+      <y-m>-0.04</y-m>
+      <z-m>-0.465</z-m>
+<pitch-deg>-66</pitch-deg>
+    </offsets>
+  </model>
+<!--Gear-->
+    <model>
+    <path>gear/gear.xml</path>
+    <offsets>
+      <x-m>0.375</x-m>
+      <y-m>0.2</y-m>
+      <z-m>-0.47</z-m>
+<pitch-deg>-66</pitch-deg>
+    </offsets>
+  </model>
+<!--Throttle-->
+<model>
+    <path>Instruments/TQ/TQ.xml</path>
+    <offsets>
+      <x-m>0.52</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.53</z-m>
+<pitch-deg>24</pitch-deg>
+    </offsets>
+  </model>
+<!--Main Switches-->
+      <model>
+    <path>Instruments/switch/battery.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.07</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+        <model>
+    <path>Instruments/switch/avionics.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.05</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+        <model>
+    <path>Instruments/switch/wheelthruster.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.025</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+<!--Engine control-->
+
+   <model>
+    <path>Instruments/switch/engmaster1.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.00</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+    <model>
+    <path>Instruments/switch/engind1.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.02</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+
+
+
+   <model>
+    <path>Instruments/switch/engmaster2.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.06</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+    <model>
+    <path>Instruments/switch/engind2.xml</path>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.04</y-m>
+      <z-m>-0.258</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+<!--Light switches-->
+    <model>
+    <path>Instruments/switch/strobe-lights.xml</path>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>-0.302</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+      <model>
+    <path>Instruments/switch/landing-lights.xml</path>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.02</y-m>
+      <z-m>-0.302</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+     <model>
+    <path>Instruments/switch/nav-lights.xml</path>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.00</y-m>
+      <z-m>-0.302</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+   <model>
+    <path>Instruments/switch/instr-lights.xml</path>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.04</y-m>
+      <z-m>-0.302</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+<!--Text-->
+   <model>
+    <path>Instruments/text/battalt.ac</path>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>-0.06</y-m>
+      <z-m>-0.278</z-m>
+<pitch-deg>-324</pitch-deg>
+<heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+   <model>
+    <path>Instruments/text/lights.ac</path>
+    <offsets>
+      <x-m>0.09</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.32</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+<!--Flight displays-->
+     <model>
+    <path>Instruments/zkv1000/pfd.xml</path>
+    <offsets>
+      <y-m>-0.55</y-m>
+      <x-m>0.018</x-m>
+      <z-m>0.005</z-m> 
+    </offsets>
+  </model>
+     <model>
+    <path>Instruments/zkv1000/mfd.xml</path>
+    <offsets>
+      <y-m>-0.0</y-m>
+      <x-m>0.018</x-m>
+      <z-m>0.005</z-m> 
+    </offsets>
+  </model>
+
+     <model>
+    <path>Instruments/zkv1000/pfd.xml</path>
+    <offsets>
+      <y-m>0.55</y-m>
+      <x-m>0.018</x-m>
+      <z-m>0.005</z-m> 
+    </offsets>
+  </model>
+<!--Autopilot-->
+<model>
+    <path>Instruments/ap/ap.xml</path>
+    <offsets>
+      <y-m>-0.0</y-m>
+      <x-m>0.0</x-m>
+      <z-m>0.22</z-m> 
+    </offsets>
+  </model>
+<!--Standby Instruments-->
+<model>
+    <path>Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <y-m>-0.4</y-m>
+      <x-m>0.012</x-m>
+      <z-m>0.215</z-m> 
+    </offsets>
+  </model>
+<model>
+    <path>Instruments/ai/ai.xml</path>
+    <offsets>
+      <y-m>-0.3</y-m>
+      <x-m>0.01</x-m>
+      <z-m>0.215</z-m> 
+    </offsets>
+  </model>
+<model>
+    <path>Instruments/alt/alt.xml</path>
+    <offsets>
+      <y-m>-0.2</y-m>
+      <x-m>0.01</x-m>
+      <z-m>0.215</z-m> 
+    </offsets>
+  </model>
+<model>
+    <path>Instruments/hi/hi.xml</path>
+    <offsets>
+      <y-m>0.2</y-m>
+      <x-m>0.009</x-m>
+      <z-m>0.215</z-m> 
+    </offsets>
+  </model>
+<model>
+    <path>Instruments/asi/asi.xml</path>
+    <offsets>
+      <y-m>0.3</y-m>
+      <x-m>0.01</x-m>
+      <z-m>0.215</z-m> 
+    </offsets>
+  </model>
+<model>
+    <path>Instruments/ki206/ki206.xml</path>
+    <offsets>
+      <y-m>0.4</y-m>
+      <x-m>0.009</x-m>
+      <z-m>0.215</z-m> 
+    </offsets>
+  </model>
+</PropertyList>
