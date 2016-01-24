@@ -18,12 +18,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -86,12 +87,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -236,12 +238,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -296,12 +299,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -334,12 +338,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -372,12 +377,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-        <property>/instrumentation/zkv1000/pfd/wind-data</property>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    <property>/instrumentation/zkv1000/pfd/wind-data</property> </and>
       </condition>
       
       <layers>
@@ -501,12 +507,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -539,12 +546,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <equals>
-          <property>/instrumentation/zkv1000/pfd/status</property>
-          <value>1</value>
-        </equals>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -701,9 +709,13 @@
       
       <layers>
         <layer>
-          <condition>
-            <property>/instrumentation/zkv1000/pfd/status</property>
-          </condition>
+          <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
           
           <type>text</type>
           <font>condensed</font>
@@ -763,9 +775,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -827,9 +843,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -1393,9 +1413,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       <layers>
         <layer>
           <type>text</type>
@@ -1580,9 +1604,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -1766,9 +1794,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -1878,9 +1910,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -1989,9 +2025,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       
       <layers>
         <layer>
@@ -2047,6 +2087,10 @@
       <layers>
         <layer>
           <condition>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
             <property>/instrumentation/zkv1000/pfd/status</property>
             <not>
               <property>/autopilot/locks/passive-mode</property>
@@ -2080,9 +2124,13 @@
       <w-base>1024</w-base>
       <h-base>1024</h-base>
       
-      <condition>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </condition>
+      <condition><and>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/pfd</property>
+          <value>6.0</value>
+        </greater-than>
+      <property>/instrumentation/zkv1000/pfd/status</property>
+    </and></condition>
       <layers>
         <layer>
           <type>text</type>

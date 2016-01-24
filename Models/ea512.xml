@@ -45,17 +45,30 @@
     </animation>
  <animation>
   <type>material</type>
-  <object-name>cockpit</object-name>
-  <emission>
-   <red>0.2</red>
-   <green>0.2</green>
-   <blue>0.2</blue>
-    <condition>
-<and>
+  <object-name>panels</object-name>
+  <object-name>mainswitches</object-name>
+<condition>
       <property>/controls/electric/battery-switch</property>
-<property>/controls/lighting/instrument-lights</property>
-</and>
     </condition>
+  <emission>
+   <red>0.0001</red>
+   <green>0.0001</green>
+   <blue>0.00009</blue>
+	<factor-prop>/controls/lighting/flood-light</factor-prop>
+  </emission>
+ </animation>
+ <animation>
+  <type>material</type>
+  <object-name>cockpit.001</object-name>
+  <object-name>seatC</object-name>
+<condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  <emission>
+   <red>0.001</red>
+   <green>0.001</green>
+   <blue>0.0009</blue>
+	<factor-prop>/controls/lighting/flood-light</factor-prop>
   </emission>
  </animation>
 <!--Turbines--> 
@@ -98,7 +111,7 @@
 <!-- Lights, from CRJ700, thanks to Ryan Miller -->
 	<model>
 		<name>Port nav light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/rednav.xml</path>
+		<path>Lights/rednav.xml</path>
 		<offsets>
 			<x-m>9.39219</x-m>
 			<y-m>-23.03871</y-m>
@@ -107,7 +120,7 @@
 	</model>
 	<model>
 		<name>Starboard nav light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/greennav.xml</path>
+		<path>Lights/greennav.xml</path>
 		<offsets>
 			<x-m>9.39219</x-m>
 			<y-m>23.03871</y-m>
@@ -116,7 +129,7 @@
 	</model>
 	<model>
 		<name>Port strobe light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/strobe.xml</path>
+		<path>Lights/strobe.xml</path>
 		<offsets>
 			<x-m>9.39219</x-m>
 			<y-m>-23.03871</y-m>
@@ -125,7 +138,7 @@
 	</model>
 	<model>
 		<name>Starboard strobe light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/strobe.xml</path>
+		<path>Lights/strobe.xml</path>
 		<offsets>
 			<x-m>9.39219</x-m>
 			<y-m>23.03871</y-m>
@@ -134,7 +147,7 @@
 	</model>
 	<model>
 		<name>Rear beacon</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/beacon.xml</path>
+		<path>Lights/beacon.xml</path>
 		<offsets>
 			<x-m>22.10684</x-m>
 			<y-m>0</y-m>
@@ -143,7 +156,7 @@
 	</model>
 	<model>
 		<name>Top beacon</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/beacon.xml</path>
+		<path>Lights/beacon.xml</path>
 		<offsets>
 			<x-m>-0.36613</x-m>
 			<y-m>0</y-m>
@@ -152,87 +165,82 @@
 	</model>
 	<model>
 		<name>Bottom beacon</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/beacon.xml</path>
+		<path>Lights/beacon.xml</path>
 		<offsets>
 			<x-m>0.30675</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.22213</z-m>
 		</offsets>
 	</model>
-	<!--<model>
-		<name>Port landing light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/landing-wing.xml</path>
-		<overlay>
-			<params>
-				<source>systems/electrical/outputs/landing-lights[0]</source>
-			</params>
-		</overlay>
-		<offsets>
-			<x-m>-2.776</x-m>
-			<y-m>-1.75</y-m>
-			<z-m>-2.199</z-m>
-		</offsets>
-	</model>
 	<model>
-		<name>Port landing light (inside)</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/landing-wing-inside.xml</path>
+		<name>Port landing light</name>
+		<path>Lights/landing-nose.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/landing-lights[0]</source>
 			</params>
 		</overlay>
 		<offsets>
-			<x-m>-5.642</x-m>
-			<y-m>-7.22</y-m>
-			<z-m>-1.906</z-m>
+			<x-m>0.9</x-m>
+			<y-m>-6.65786</y-m>
+			<z-m>-1.56314</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Port taxi light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/taxi.xml</path>
+		<path>Lights/taxi.xml</path>
 		<offsets>
 			<x-m>-2.944</x-m>
-			<y-m>-1.511</y-m>
-			<z-m>-2.203</z-m>
+			<y-m>-6.65786</y-m>
+			<z-m>-1.56314</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Starboard landing light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/landing-wing.xml</path>
+		<path>Lights/landing-nose.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/landing-lights[2]</source>
 			</params>
 		</overlay>
 		<offsets>
-			<x-m>-2.776</x-m>
-			<y-m>1.75</y-m>
-			<z-m>-2.199</z-m>
-		</offsets>
-	</model>
-	<model>
-		<name>Starboard landing light (inside)</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/landing-wing-inside.xml</path>
-		<overlay>
-			<params>
-				<source>systems/electrical/outputs/landing-lights[2]</source>
-			</params>
-		</overlay>
-		<offsets>
-			<x-m>-5.642</x-m>
-			<y-m>7.22</y-m>
-			<z-m>-1.906</z-m>
+			<x-m>0.9</x-m>
+			<y-m>6.65786</y-m>
+			<z-m>-1.56314</z-m>
 		</offsets>
 	</model>
 	<model>
 		<name>Starboard taxi light</name>
-		<path>Aircraft/EchoAirPropPower/Models/Lights/taxi.xml</path>
+		<path>Lights/taxi.xml</path>
 		<offsets>
 			<x-m>-2.944</x-m>
-			<y-m>1.511</y-m>
-			<z-m>-2.203</z-m>
+			<y-m>6.65786</y-m>
+			<z-m>-1.56314</z-m>
 		</offsets>
-	</model>-->
+	</model>
+	<model>
+		<name>Front landing light</name>
+		<path>Lights/landing-nose.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/landing-lights[2]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-12.5117</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-1.88976</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Front taxi light</name>
+		<path>Lights/taxi.xml</path>
+		<offsets>
+			<x-m>-12.5117</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-1.88976</z-m>
+		</offsets>
+	</model>
 
 
 
@@ -240,6 +248,7 @@
 <!--Gear position-->
     <animation>
         <type>rotate</type>
+        <object-name>landinglampF</object-name>
         <object-name>gearFU</object-name>
         <object-name>gearFD</object-name>
         <object-name>wheelFL</object-name>
@@ -276,6 +285,7 @@
 
     <animation>
         <type>rotate</type>
+        <object-name>landinglampF</object-name>
         <object-name>gearFU</object-name>
         <object-name>gearFD</object-name>
         <object-name>wheelFL</object-name>
@@ -299,7 +309,7 @@
         <object-name>wheelFR</object-name>
         <object-name>gearFD</object-name>
         <object-name>chokesF</object-name>
-        <property>gear/gear[0]/compression-m</property>
+        <property>gear/gear[0]/compression-norm</property>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -326,6 +336,7 @@
 <!--Gear position-->
     <animation>
         <type>rotate</type>
+        <object-name>landinglampR</object-name>
         <object-name>gearRU</object-name>
         <object-name>gearRD</object-name>
         <object-name>wheelRL</object-name>
@@ -364,7 +375,7 @@
         <object-name>wheelRL</object-name>
         <object-name>gearRD</object-name>
         <object-name>chokesR</object-name>
-        <property>gear/gear[2]/compression-m</property>
+        <property>gear/gear[2]/compression-norm</property>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -393,6 +404,7 @@
 <!--Gear position-->
     <animation>
         <type>rotate</type>
+        <object-name>landinglampL</object-name>
         <object-name>gearLU</object-name>
         <object-name>gearLD</object-name>
         <object-name>wheelLL</object-name>
@@ -430,7 +442,7 @@
         <object-name>wheelLL</object-name>
         <object-name>gearLD</object-name>
         <object-name>chokesL</object-name>
-        <property>gear/gear[1]/compression-m</property>
+        <property>gear/gear[1]/compression-norm</property>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -456,6 +468,210 @@
 
 <!-- CABIN -->
 
+<!--Lavatory-->
+<!--Toilet-->
+
+ <animation>
+    <type>pick</type>
+    <object-name>buttonL</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/left/toilet</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/left/toilet-button</property>
+      </binding>
+<mod-up>
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/left/toilet-button</property>
+      </binding>
+</mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>buttonL</object-name>
+    <property>instrumentation/lavatory/left/toilet-button</property>
+    <factor> -0.01 </factor>
+<axis><x>1</x>
+		</axis>
+  </animation>
+
+ <animation>
+    <type>pick</type>
+    <object-name>buttonR</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/right/toilet</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/right/toilet-button</property>
+      </binding>
+<mod-up>
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/right/toilet-button</property>
+      </binding>
+</mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>buttonR</object-name>
+    <property>instrumentation/lavatory/right/toilet-button</property>
+    <factor> -0.01 </factor>
+<axis><x>1</x>
+		</axis>
+  </animation>
+
+
+<!--Sink-->
+<!--Left-->
+ <animation>
+    <type>pick</type>
+    <object-name>faucetL</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/left/water</property>
+      </binding>
+    </action>
+  </animation>
+<!--Right-->
+ <animation>
+    <type>pick</type>
+    <object-name>faucetR</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/lavatory/right/water</property>
+      </binding>
+    </action>
+  </animation>
+<!--Lighting-->
+
+<animation>
+  <type>material</type>
+    <object-name>lamps</object-name>
+<condition>
+        <property>/controls/electric/battery-switch</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0.001</red>	
+  <green>0.001</green>	
+  <blue>0.001</blue>
+        <factor-prop>/instrumentation/cabincontrol/lighting/flood</factor-prop>
+ </emission>
+ </animation>
+
+<animation>
+  <type>material</type>
+    <object-name>cabincontrol</object-name>
+    <object-name>cabincontrolB</object-name>
+    <object-name>lavatorywallL</object-name>
+    <object-name>lavatorywallR</object-name>
+    <object-name>lavatorydoorLF</object-name>
+    <object-name>lavatorydoorLR</object-name>
+    <object-name>lavatorydoorRF</object-name>
+    <object-name>lavatorydoorRR</object-name>
+    <object-name>cockpitdoorL</object-name>
+    <object-name>cockpitdoorR</object-name>
+    <object-name>interior</object-name>
+    <object-name>seat</object-name>
+    <object-name>phone1</object-name>
+    <object-name>phone2</object-name>
+    <object-name>phoneB1</object-name>
+    <object-name>phoneB2</object-name>
+<condition>
+        <property>/controls/electric/battery-switch</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0.0005</red>	
+  <green>0.0005</green>	
+  <blue>0.0005</blue>
+        <factor-prop>/instrumentation/cabincontrol/lighting/flood</factor-prop>
+ </emission>
+ </animation>
+
+ <animation>
+        <type>knob</type>
+        <object-name>lightsR</object-name>
+                <property>/instrumentation/cabincontrol/lighting/flood</property>
+<factor>-0.1</factor>
+        <center>
+            <x-m>13.06876</x-m><y-m>0.74507</y-m><z-m>0.69733</z-m>
+        </center>
+        <axis>
+            <x>1</x><y>0</y><z>0</z>
+        </axis>
+ 
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/instrumentation/cabincontrol/lighting/flood</property>
+                <factor>-50</factor>
+                <min>0</min>
+                <max>1000</max>                
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+ <animation>
+        <type>knob</type>
+        <object-name>lightsF</object-name>
+                <property>/instrumentation/cabincontrol/lighting/flood</property>
+<factor>-0.1</factor>
+        <center>
+            <x-m>-9.93512</x-m><y-m>0.75283</y-m><z-m>0.74176</z-m>
+        </center>
+        <axis>
+            <x>1</x><y>0</y><z>0</z>
+        </axis>
+ 
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>/instrumentation/cabincontrol/lighting/flood</property>
+                <factor>-50</factor>
+                <min>0</min>
+                <max>1000</max>                
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
 <!--Panel-->
  -<model>
     <path>Panel/panel.xml</path>
@@ -580,6 +796,142 @@
  </emission>
  </animation>
 <!--Calls-->
+<!--Cockpit calls ...-->
+<!--... Front Cabin-->
+ <animation>
+    <type>pick</type>
+    <object-name>frontcabincallC</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/cabincontrol/calls/frontcabin</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+    <type>translate</type>
+    <object-name>frontcabincallC</object-name>
+    <property>instrumentation/cabincontrol/calls/frontcabin</property>
+    <factor> -0.005 </factor>
+
+		<axis><z>1</z>
+		</axis>
+  </animation>
+<animation>
+  <type>material</type>
+    <object-name>frontcabincallC</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/frontcabin</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--... Rear Cabin-->
+ <animation>
+    <type>pick</type>
+    <object-name>rearcabincallC</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/cabincontrol/calls/rearcabin</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+    <type>translate</type>
+    <object-name>rearcabincallC</object-name>
+    <property>instrumentation/cabincontrol/calls/rearcabin</property>
+    <factor> -0.005 </factor>
+
+		<axis><z>1</z>
+		</axis>
+  </animation>
+<animation>
+  <type>material</type>
+    <object-name>frontcabincallC</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/rearcabin</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+
+
+<!--Call Front Cabin-->
+ <animation>
+    <type>pick</type>
+    <object-name>frontcabincall</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/cabincontrol/calls/frontcabin</property>
+      </binding>
+    </action>
+  </animation>
+<animation>
+    <type>translate</type>
+    <object-name>frontcabincall</object-name>
+    <property>instrumentation/cabincontrol/calls/frontcabin</property>
+    <factor> -0.005 </factor>
+
+		<axis><x>1</x>
+		</axis>
+  </animation>
+<animation>
+  <type>material</type>
+    <object-name>frontcabincall</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/frontcabin</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
 <!--Call Rear Cabin-->
  <animation>
     <type>pick</type>
@@ -592,12 +944,6 @@
         <command>property-toggle</command>
     <property>instrumentation/cabincontrol/calls/rearcabin</property>
       </binding>
-<mod-up>
-      <binding>
-        <command>property-toggle</command>
-    <property>instrumentation/cabincontrol/calls/rearcabin</property>
-      </binding>
-</mod-up>
     </action>
   </animation>
 <animation>
@@ -645,12 +991,6 @@
         <command>property-toggle</command>
     <property>instrumentation/cabincontrol/calls/cockpit</property>
       </binding>
-<mod-up>
-      <binding>
-        <command>property-toggle</command>
-    <property>instrumentation/cabincontrol/calls/cockpit</property>
-      </binding>
-</mod-up>
     </action>
   </animation>
  <animation>
@@ -686,11 +1026,166 @@
   <blue>0</blue>
  </emission>
  </animation>
+<!--Button gets red when a call is coming in-->
+<!--Front cabin calls rear cabin-->
+<animation>
+  <type>material</type>
+    <object-name>frontcabincall</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/rearcabin</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--Cockpit calls rear cabin-->
+<animation>
+  <type>material</type>
+    <object-name>cockpitcallB</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/cockpit</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--Cockpit calls front cabin-->
+<animation>
+  <type>material</type>
+    <object-name>cockpitcall</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/cockpit</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--Rear cabin calls front cabin-->
+<animation>
+  <type>material</type>
+    <object-name>rearcabincall</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/frontcabin</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--front cabin calls cockpit-->
+<animation>
+  <type>material</type>
+    <object-name>frontcabincallC</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/cockpit</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<!--rear cabin calls cockpit-->
+<animation>
+  <type>material</type>
+    <object-name>rearcabincallC</object-name>
+<condition>
+        <property>/instrumentation/cabincontrol/calls/cockpit</property>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
 <!--Pickup Phone-->
  <animation>
     <type>pick</type>
-    <object-name>phone1</object-name>
-    <object-name>phone2</object-name>
+    <object-name>phone1C</object-name>
+    <object-name>phone2C</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/cabincontrol/phone-takenC</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+    <property>instrumentation/cabincontrol/calls/cockpit</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+ <animation>
+    <type>pick</type>
     <object-name>phoneB1</object-name>
     <object-name>phoneB2</object-name>
     <action>
@@ -698,21 +1193,62 @@
       <repeatable>false</repeatable>  
       <binding>
         <command>property-toggle</command>
-    <property>instrumentation/cabincontrol/phone-taken</property>
+    <property>instrumentation/cabincontrol/phone-takenR</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+    <property>instrumentation/cabincontrol/calls/rearcabin</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+ <animation>
+    <type>pick</type>
+    <object-name>phone1</object-name>
+    <object-name>phone2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>property-toggle</command>
+    <property>instrumentation/cabincontrol/phone-takenF</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+    <property>instrumentation/cabincontrol/calls/frontcabin</property>
+	<value>0</value>
       </binding>
     </action>
   </animation>
  <animation>
     <type>select</type>
-    <object-name>phone1</object-name>
-    <object-name>phoneB1</object-name><condition><not>
-    <property>instrumentation/cabincontrol/phone-taken</property></not></condition>
+    <object-name>phone1C</object-name><condition><not>
+    <property>instrumentation/cabincontrol/phone-takenC</property></not></condition>
   </animation>
  <animation>
     <type>select</type>
-    <object-name>phone2</object-name>
+    <object-name>phone2C</object-name><condition>
+    <property>instrumentation/cabincontrol/phone-takenC</property></condition>
+  </animation>
+ <animation>
+    <type>select</type>
+    <object-name>phone1</object-name><condition><not>
+    <property>instrumentation/cabincontrol/phone-takenF</property></not></condition>
+  </animation>
+ <animation>
+    <type>select</type>
+    <object-name>phone2</object-name><condition>
+    <property>instrumentation/cabincontrol/phone-takenF</property></condition>
+  </animation>
+ <animation>
+    <type>select</type>
+    <object-name>phoneB1</object-name><condition><not>
+    <property>instrumentation/cabincontrol/phone-takenR</property></not></condition>
+  </animation>
+ <animation>
+    <type>select</type>
     <object-name>phoneB2</object-name><condition>
-    <property>instrumentation/cabincontrol/phone-taken</property></condition>
+    <property>instrumentation/cabincontrol/phone-takenR</property></condition>
   </animation>
 
 <!--DOORS-->

@@ -15,8 +15,9 @@ setlistener("/sim/signals/fdm-initialized", func {
 
 
 update_bus1 = func(pwr){
-    setprop("systems/electrical/outputs/lights/landing-lights[0]",pwr * getprop("controls/lighting/landing-lights"));
-    setprop("systems/electrical/outputs/lights/landing-lights[1]",pwr * getprop("controls/lighting/landing-lights[1]"));
+    setprop("systems/electrical/outputs/landing-lights[0]",pwr * getprop("controls/lighting/landing-lights"));
+    setprop("systems/electrical/outputs/landing-lights[1]",pwr * getprop("controls/lighting/landing-lights"));
+    setprop("systems/electrical/outputs/landing-lights[2]",pwr * getprop("controls/lighting/landing-lights"));
     setprop("systems/electrical/outputs/lights/taxi-lights",pwr * getprop("controls/lighting/taxi-lights"));
     setprop("systems/electrical/outputs/lights/logo-lights",pwr * getprop("controls/lighting/logo-lights"));
     setprop("systems/electrical/outputs/lights/nav-lights",pwr * getprop("controls/lighting/nav-lights"));
@@ -34,6 +35,8 @@ update_bus2 = func(pwr){
     setprop("systems/electrical/outputs/adf",avn);
     setprop("systems/electrical/outputs/comm",avn);
     setprop("systems/electrical/outputs/nav",avn);
+    setprop("systems/electrical/outputs/zkv1000/pfd",avn);
+    setprop("systems/electrical/outputs/zkv1000/mfd",avn);
 }
 
 update_bus3 = func(pwr){

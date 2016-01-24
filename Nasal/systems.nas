@@ -255,6 +255,7 @@ FHmeter.stop();
 var alert=Alarm.new("instrumentation/annunciators");
 
 setlistener("/sim/signals/fdm-initialized", func {
+    print("This is the EchoAir 512 Cruiser, a twin engine 100-seat commuter. Have fun!");
     setprop("/instrumentation/clock/flight-meter-hour",0);
     print("systems loaded");
     FDM=getprop("sim/flight-model");

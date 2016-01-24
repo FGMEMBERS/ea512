@@ -62,14 +62,6 @@ set('/controls/flight/elevator-trim', 1)
         <command>property-toggle</command>
         <property>sim/model/sound/click</property>
       </binding>
-      <binding>
-	<command>property-toggle</command>
-        <property>/instrumentation/zkv1000/pfd/status</property>
-      </binding><!--
-      <binding>
-	<command>property-toggle</command>
-        <property>/sim/model/material/instruments/factor</property>
-      </binding>-->
     </action>
   </animation>
   

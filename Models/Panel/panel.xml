@@ -58,7 +58,7 @@
     </offsets>
   </model>
       <model>
-    <path>Instruments/kx165/kx165-1.xml</path>
+    <path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
     <offsets>
       <x-m>0.285</x-m>
       <y-m>-0.00</y-m>
@@ -198,6 +198,15 @@
     <offsets>
       <x-m>0.08</x-m>
       <y-m>0.04</y-m>
+      <z-m>-0.302</z-m>
+<pitch-deg>-34</pitch-deg>
+    </offsets>
+  </model>
+   <model>
+    <path>Instruments/switch/flood-light.xml</path>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.06</y-m>
       <z-m>-0.302</z-m>
 <pitch-deg>-34</pitch-deg>
     </offsets>

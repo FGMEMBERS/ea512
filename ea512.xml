@@ -281,7 +281,7 @@
 		<control-input axis="/sim/model/pushback/force-rvs" control="THROTTLE"/>
 	</thruster>
 <!--Front-->
-<gear x="12.31662" y="0.25" z="-2.82407" compression="0.5" retract-time="5"
+<gear x="12.31662" y="0.25" z="-2.82407" compression="0.1" retract-time="5"
     spring="1.0" damp="1.50">
   <control-input axis="/controls/gear/steering" control="STEER" src0="-0.5" dst0="1" src1="0.5" dst1="-1"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -289,7 +289,7 @@
   <control-output control="STEER" prop="/gear/gear[0]/steering-norm"/>
   <control-speed control="EXTEND" transition-time="3"/>
 </gear>
-<gear x="12.31662" y="-0.25" z="-2.82407" compression="0.5" retract-time="5"
+<gear x="12.31662" y="-0.25" z="-2.82407" compression="0.1" retract-time="5"
     spring="1.0" damp="1.50">
   <control-input axis="/controls/gear/steering" control="STEER" src0="-0.5" dst0="1" src1="0.5" dst1="-1"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -298,7 +298,7 @@
   <control-speed control="EXTEND" transition-time="3"/>
 </gear>
 <!--Left-->
-<gear x="-1.53906" y="-3.0255" z="-2.81336" compression="0.5" retract-time="5"
+<gear x="-1.53906" y="-3.0255" z="-2.81336" compression="0.1" retract-time="5"
     spring="1.0" damp="1.5" sfric="1.5" dfric="1.0">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
@@ -306,7 +306,7 @@
   <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   <control-speed control="EXTEND" transition-time="5"/>
 </gear>
-<gear x="-1.53906" y="-2.5585" z="-2.81336" compression="0.5" retract-time="5"
+<gear x="-1.53906" y="-2.5585" z="-2.81336" compression="0.1" retract-time="5"
     spring="1.0" damp="1.5" sfric="1.5" dfric="1.0">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
@@ -315,7 +315,7 @@
   <control-speed control="EXTEND" transition-time="5"/>
 </gear>
 <!--Right-->
-<gear x="-1.53906" y="2.5585" z="-2.81336" compression="0.5" retract-time="5"
+<gear x="-1.53906" y="2.5585" z="-2.81336" compression="0.1" retract-time="5"
     spring="1.0" damp="1.5" sfric="1.5" dfric="1.0">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
@@ -323,7 +323,7 @@
   <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   <control-speed control="EXTEND" transition-time="5"/>
 </gear>
-<gear x="-1.53906" y="3.0255" z="-2.81336" compression="0.5" retract-time="5"
+<gear x="-1.53906" y="3.0255" z="-2.81336" compression="0.1" retract-time="5"
     spring="1.0" damp="1.5" sfric="1.5" dfric="1.0">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>

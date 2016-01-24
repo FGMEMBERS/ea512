@@ -175,9 +175,9 @@ Syd Adams
     <object-name>KI206.knob</object-name>
     <property>instrumentation/nav/radials/selected-deg</property>
     <center>
-      <x-m>0.0</x-m>
-      <y-m>-0.033 </y-m>
-      <z-m>-0.033 </z-m>
+      <x-m>0.00358</x-m>
+      <y-m>0.03066 </y-m>
+      <z-m>-0.03049 </z-m>
     </center>
     <axis>
       <x>-1</x>

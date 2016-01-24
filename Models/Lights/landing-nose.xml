@@ -14,7 +14,7 @@
 				</equals>
 				<greater-than>
 					<property>systems/electrical/outputs/landing-lights[1]</property>
-					<value>5</value>
+					<value>0.9</value>
 				</greater-than>
 			</and>
 		</condition>

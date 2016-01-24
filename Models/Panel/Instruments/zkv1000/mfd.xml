@@ -156,6 +156,8 @@
   
   <animation>
     <type>material</type>
+    <object-name>on.power</object-name>
+    <object-name>off.power</object-name>
     <object-name>ai.background</object-name>
     <object-name>ai.cursor.C</object-name>
     <object-name>ai.cursor.L</object-name>
@@ -238,6 +240,36 @@
     <object-name>cursor.leftRPM</object-name>
     <object-name>cursor.rightLoad</object-name>
     <object-name>cursor.rightRPM</object-name>
+    <object-name>softkey.NAV.swap</object-name>
+    <object-name>softkey.AP</object-name>
+    <object-name>softkey.FD</object-name>
+    <object-name>softkey.HDG</object-name>
+    <object-name>softkey.NAV</object-name>
+    <object-name>softkey.APR</object-name>
+    <object-name>softkey.ALT</object-name>
+    <object-name>softkey.VNV</object-name>
+    <object-name>softkey.VS</object-name>
+    <object-name>softkey.NOSEUP</object-name>
+    <object-name>softkey.FLC</object-name>
+    <object-name>softkey.NOSEDOWN</object-name>
+    <object-name>softkey.02</object-name>
+    <object-name>softkey.03</object-name>
+    <object-name>softkey.04</object-name>
+    <object-name>softkey.05</object-name>
+    <object-name>softkey.06</object-name>
+    <object-name>softkey.07</object-name>
+    <object-name>softkey.08</object-name>
+    <object-name>softkey.09</object-name>
+    <object-name>softkey.10</object-name>
+    <object-name>softkey.11</object-name>
+    <object-name>softkey.12</object-name>
+    <object-name>softkey.CLR</object-name>
+    <object-name>softkey.CLR</object-name>
+    <object-name>softkey.FPL</object-name>
+    <object-name>softkey.PROC</object-name>
+    <object-name>softkey.D</object-name>
+    <object-name>softkey.MENU</object-name>
+    <object-name>softkey.COMM.swap</object-name>
     <condition>
       <property>controls/lighting/instrument-lights</property>
       <property>/controls/electric/battery-switch</property>
@@ -304,10 +336,14 @@
     <type>select</type>
     <object-name>off.background</object-name>
     <object-name>on.power</object-name>
-    <condition>
+    <condition><or>
+        <less-than>
+          <property>systems/electrical/outputs/zkv1000/mfd</property>
+          <value>6.0</value>
+        </less-than>
       <not>
         <property>/instrumentation/zkv1000/mfd/status</property>
-      </not>
+      </not></or>
     </condition>
   </animation>
   
@@ -335,6 +371,10 @@
     <object-name>infos.leftLoad</object-name>
     <object-name>infos.rightLoad</object-name>
     <condition>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/mfd</property>
+          <value>6.0</value>
+        </greater-than>
       <property>/instrumentation/zkv1000/mfd/status</property>
     </condition>
   </animation>
@@ -381,6 +421,10 @@
     <object-name>infos.XPDR</object-name>
     <object-name>sofkey.NAV.swap</object-name>
     <condition>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/mfd</property>
+          <value>6.0</value>
+        </greater-than>
       <equals>
         <property>/instrumentation/zkv1000/mfd/status</property>
         <value>1</value>
@@ -401,6 +445,10 @@
     <object-name>hsi.crs.pointer</object-name>
     <object-name>hsi.hdg</object-name>
     <condition>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/mfd</property>
+          <value>6.0</value>
+        </greater-than>
       <equals>
         <property>/instrumentation/zkv1000/mfd/status</property>
         <value>1</value>
@@ -413,6 +461,10 @@
     <type>select</type>
     <object-name>hsi.arc</object-name>
     <condition>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/mfd</property>
+          <value>6.0</value>
+        </greater-than>
       <equals>
         <property>/instrumentation/zkv1000/mfd/status</property>
         <value>1</value>
@@ -432,6 +484,10 @@
     <object-name>map.alt.1min</object-name>
     <object-name>map.alt.selected</object-name>
     <condition>
+        <greater-than>
+          <property>systems/electrical/outputs/zkv1000/mfd</property>
+          <value>6.0</value>
+        </greater-than>
       <equals>
         <property>/instrumentation/zkv1000/mfd/status</property>
         <value>2</value>

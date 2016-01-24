@@ -1,19 +1,20 @@
 <PropertyList>
 <path>TQ.ac</path>
-<!--<animation>
+ <animation>
   <type>material</type>
-  <object-name>gearFind</object-name>
-  <object-name>gearLind</object-name>
-  <object-name>gearRind</object-name>
-  <object-name>gearF.001</object-name>
-  <object-name>gearL.001</object-name>
-  <object-name>gearR.001</object-name>
-  <ambient>
-   <red>0.5</red>
-   <green>0.5</green>
-   <blue>0.5</blue>
-  </ambient>
- </animation>-->
+  <object-name>throttleL</object-name>
+  <object-name>throttleR</object-name>
+  <object-name>flapslever</object-name>
+<condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+  <emission>
+   <red>0.0001</red>
+   <green>0.0001</green>
+   <blue>0.00009</blue>
+	<factor-prop>/controls/lighting/flood-light</factor-prop>
+  </emission>
+ </animation>
 <!--Light reverser lights when thrust reverse is active-->
 <animation>
   <type>material</type>

@@ -41,9 +41,27 @@
         <property>/controls/lighting/instrument-lights</property>
       </binding>
       <binding>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+        <command>property-cycle</command>
+        <property>instrumentation/transponder/dimming-norm</property>
+	<value>100</value>
+	<value>0</value>
+      </binding>
+      <binding>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+        <command>property-cycle</command>
+        <property>instrumentation/comm[0]/dimming-norm</property>
+	<value>100</value>
+	<value>0</value>
+      </binding>
+      <binding>
         <command>property-toggle</command>
         <property>sim/model/sound/click</property>
-      </binding>
+      </binding>  
     </action>
   </animation>
   

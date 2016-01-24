@@ -17,7 +17,7 @@
 				</not>
 				<greater-than>
 					<property alias="../../../../../params/source" />
-					<value>5</value>
+					<value>0.9</value>
 				</greater-than>
 			</and>
 		</condition>

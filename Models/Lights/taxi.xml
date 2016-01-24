@@ -13,7 +13,7 @@
 				</not>
 				<greater-than>
 					<property>systems/electrical/outputs/taxi-lights</property>
-					<value>5</value>
+					<value>1</value>
 				</greater-than>
 			</and>
 		</condition>

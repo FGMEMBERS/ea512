@@ -3,6 +3,151 @@
 <PropertyList>
 
     <fx>
+<!--Toilet-->
+
+<!--Left-->
+
+		<announcement>
+			<name>toiletL</name>
+			<path>toilet.wav</path>
+			<mode>once</mode>
+			<condition>
+        <property>/instrumentation/lavatory/left/toilet</property>
+			</condition>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<position>
+				<x>-10.10552</x>
+				<y>-1.03554</y>
+				<z>0.01604</z>
+			</position>
+			<reference-dist>2</reference-dist>
+			<max-dist>3</max-dist>
+		</announcement>
+<!--Right-->
+
+		<announcement>
+			<name>toiletR</name>
+			<path>toilet.wav</path>
+			<mode>once</mode>
+			<condition>
+        <property>/instrumentation/lavatory/right/toilet</property>
+			</condition>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<position>
+				<x>-10.10552</x>
+				<y>1.03554</y>
+				<z>0.01604</z>
+			</position>
+			<reference-dist>2</reference-dist>
+			<max-dist>3</max-dist>
+		</announcement>
+<!--Sink-->
+
+<!--Left-->
+
+		<announcement>
+			<name>waterL</name>
+			<path>water.wav</path>
+			<mode>once</mode>
+			<condition>
+        <property>/instrumentation/lavatory/left/water</property>
+			</condition>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<position>
+				<x>-10.10552</x>
+				<y>-1.03554</y>
+				<z>0.01604</z>
+			</position>
+			<reference-dist>2</reference-dist>
+			<max-dist>3</max-dist>
+		</announcement>
+<!--Right-->
+
+		<announcement>
+			<name>waterR</name>
+			<path>water.wav</path>
+			<mode>once</mode>
+			<condition>
+        <property>/instrumentation/lavatory/right/water</property>
+			</condition>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<position>
+				<x>-10.10552</x>
+				<y>1.03554</y>
+				<z>0.01604</z>
+			</position>
+			<reference-dist>2</reference-dist>
+			<max-dist>3</max-dist>
+		</announcement>
+
+<!--Front cabin call-->
+
+		<announcement>
+			<name>phoneringF</name>
+			<path>phonering.wav</path>
+			<mode>looped</mode>
+			<condition>
+        <property>/instrumentation/cabincontrol/calls/frontcabin</property>
+			</condition>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<position>
+				<x>-9.5</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>10</reference-dist>
+			<max-dist>10</max-dist>
+		</announcement>
+<!--Rear phone call-->
+
+
+		<announcement>
+			<name>phoneringR</name>
+			<path>phonering.wav</path>
+			<mode>looped</mode>
+			<condition>
+        <property>/instrumentation/cabincontrol/calls/rearcabin</property>
+			</condition>
+			<volume>
+				<factor>0.5</factor>
+			</volume>
+			<position>
+				<x>12</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>10.0</max-dist>
+		</announcement>
+<!--Cockpit phone call-->
+<announcement>
+			<name>phoneringC</name>
+			<path>phonering.wav</path>
+			<mode>looped</mode>
+			<condition>
+        <property>/instrumentation/cabincontrol/calls/cockpit</property>
+			</condition>
+			<volume>
+				<factor>1</factor>
+			</volume>
+			<position>
+				<x>-12</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>2.0</reference-dist>
+			<max-dist>2.0</max-dist>
+		</announcement>
 <!--Welcome announcement, code from A320neo-->
 
 
@@ -122,34 +267,81 @@
 					</equals>
 			</and>
 		</condition>
-	</chime>	   
-<!-- Engine 1 -->
+	</chime>
+
+<!--The sound of the fuel cell inside the body-->
+        <engine>
+            <name>fuelcell</name>
+            <reference-dist>3.0</reference-dist>
+            <max-dist>20.0</max-dist>
+            <mode>looped</mode>
+            <path>Sounds/fan.wav</path>
+            <condition>
+                <property>engines/engine[0]/running</property>
+            </condition>
+            <volume>
+                <property>sim/sound/E_volume</property>
+                <factor>0.2</factor>
+            </volume>
+            <position>
+                <x>1.02384</x>
+                <y>0.0</y>
+                <z>-0.66406</z>
+            </position>
+        </engine>
+		   
+<!--Fuel cell - start -->
 
         <crank>
-            <name>engstart0</name>
+            <name>fcstart</name>
             <reference-dist>3.0</reference-dist>
             <max-dist>20.0</max-dist>
             <mode>once</mode>
-            <path>Sounds/turbine_start.wav</path>
+            <path>engine_start.wav</path>
             <condition>
                 <property>engines/engine[0]/cranking</property>
             </condition>
             <volume>
                 <property>sim/sound/E_volume</property>
+                <factor>0.2</factor>
             </volume>
             <position>
-                <x>-1.5</x>
-                <y>2.5</y>
-                <z>-0.33</z>
+                <x>1.02384</x>
+                <y>0.0</y>
+                <z>-0.66406</z>
             </position>
-        </crank>
+        </crank>   
+		   
+<!--Fuel cell - stop -->
 
+        <shutdown>
+            <name>fcshutdown</name>
+            <reference-dist>3.0</reference-dist>
+            <max-dist>20.0</max-dist>
+            <mode>once</mode>
+            <path>engine_stop.wav</path>
+            <condition>
+                <not>
+                    <property>engines/engine[0]/running</property>
+                </not>
+            </condition>
+            <volume>
+                <property>sim/sound/E_volume</property>
+                <factor>0.2</factor>
+            </volume>
+            <position>
+                <x>1.02384</x>
+                <y>0.0</y>
+                <z>-0.66406</z>
+            </position>
+        </shutdown>   
+<!-- Propeller blades - engine left -->
         <prop>
             <name>prop1</name>
             <reference-dist>50.0</reference-dist>
             <max-dist>1000.0</max-dist>
             <mode>looped</mode>
-            <path>Sounds/turboprop1.wav</path>
+            <path>Sounds/jet.wav</path>
             <condition>
                 <greater-than>
                     <property>engines/engine[0]/n1</property>
@@ -158,7 +350,7 @@
             </condition>
             <volume>
                 <property>instrumentation/eng-gauge/prop</property>
-                <factor>0.000588</factor>
+                <factor>0.000288</factor>
                 <min>0.5</min>
                 <max>1</max>
             </volume>
@@ -171,60 +363,20 @@
                 <offset>0.0</offset>
             </pitch>
             <position>
-                <x>-1.5</x>
-                <y>2.5</y>
-                <z>-0.33</z>
-            </position>p
+                <x>-1.58941</x>
+                <y>-1.28031</y>
+                <z>-1.13828</z>
+            </position>
         </prop>
 
-        <shutdown>
-            <name>engine0 off</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>4.0</max-dist>
-            <mode>once</mode>
-            <path>Sounds/turbine_shutdown.wav</path>
-            <condition>
-                <not>
-                    <property>engines/engine[0]/running</property>
-                </not>
-            </condition>
-            <volume>
-                <property>sim/sound/E_volume</property>
-            </volume>
-            <position>
-                 <x>-1.5</x>
-                <y>2.5</y>
-                <z>-0.33</z>
-            </position>
-        </shutdown>
-
-<!-- Engine 2 -->
-
-        <crank>
-            <name>engstart1</name>
-            <reference-dist>3.0</reference-dist>
-            <max-dist>20.0</max-dist>
-            <mode>once</mode>
-            <path>Sounds/turbine_start.wav</path>
-            <condition>
-                <property>engines/engine[1]/cranking</property>
-            </condition>
-            <volume>
-                <property>sim/sound/E_volume</property>
-            </volume>
-            <position>
-                <x>-1.5</x>
-                <y>2.5</y>
-                <z>-0.33</z>
-            </position>
-        </crank>
+<!-- Propeller blades - engine right -->
 
         <prop>
             <name>prop2</name>
             <reference-dist>50.0</reference-dist>
             <max-dist>1000.0</max-dist>
             <mode>looped</mode>
-            <path>Sounds/turboprop1.wav</path>
+            <path>Sounds/jet.wav</path>
                 <condition>
                 <greater-than>
                     <property>engines/engine[1]/n1</property>
@@ -233,7 +385,7 @@
             </condition>
             <volume>
                 <property>instrumentation/eng-gauge/prop</property>
-                <factor>0.000588</factor>
+                <factor>0.000288</factor>
                 <min>0.5</min>
                 <max>1</max>
             </volume>
@@ -246,34 +398,11 @@
                 <offset>0.0</offset>
             </pitch>
             <position>
-                 <x>-1.5</x>
-                <y>2.5</y>
-                <z>-0.33</z>
-            </position>p
-        </prop>
-
-        <shutdown>
-            <name>engine0 off</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>4.0</max-dist>
-            <mode>once</mode>
-            <path>Sounds/turbine_shutdown.wav</path>
-            <condition>
-                <not>
-                    <property>engines/engine[1]/running</property>
-                </not>
-            </condition>
-            <volume>
-                <property>sim/sound/E_volume</property>
-            </volume>
-            <position>
-                 <x>-1.5</x>
-                <y>2.5</y>
-                <z>-0.33</z>
+                <x>-1.58941</x>
+                <y>1.28031</y>
+                <z>-1.13828</z>
             </position>
-        </shutdown>
-
-
+        </prop>
 
         <rumble>
             <name>rumble</name>
